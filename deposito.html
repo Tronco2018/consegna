@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="it">
 <head>
     <link rel="stylesheet" href="style.css">
@@ -10,21 +10,12 @@
         function aggiornaStatoPacco() {
             // Ottieni l'elemento <h2>
             var h4 = document.getElementById('status');
-            
             // Ottieni l'ora corrente
             var now = new Date();
             var ore = now.getHours();
             
             // Verifica se sono le 6 PM
-            if (ore >= 18) {
-                h4.textContent = 'In consegna';
-            }
-            if (ore >= 18.40) {
-                h4.textContent = 'Consegnato'
-            }
-            else {
-                h4.textContent = 'In deposito';
-            }
+            h4.textContent = "In Consegna"
         }
 
         // Esegui la funzione quando la pagina viene caricata
@@ -33,6 +24,7 @@
         // Esegui la funzione ogni minuto per aggiornare lo stato in tempo reale
         setInterval(aggiornaStatoPacco, 1000);
     </script>
+    <h6 id="debug"></h6>
 </head>
 <body>
     <h1 class="title">TTC - Tronco Transport Corporation</h1>
